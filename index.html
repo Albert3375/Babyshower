@@ -184,8 +184,49 @@
             border-radius: 5px;
         }
 
-      
-       
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-100%);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(126, 87, 194, 0.7);
+            }
+
+            50% {
+                box-shadow: 0 0 0 10px rgba(126, 87, 194, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(126, 87, 194, 0);
+            }
+        }
 
         @media (max-width: 768px) {
             .baby-image {
@@ -228,7 +269,7 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.js"></script>
 <script>
     $(document).ready(function () {
-        Swal.fire("Cuando confirmen la asistencia tambien escriban su nombre porfa!");
+        Swal.fire("Cuando confirmen la asistencia tambien escriban su nombre!");
     });
 
     const whatsappBtn = document.getElementById("whatsappBtn");
