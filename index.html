@@ -272,55 +272,10 @@
         Swal.fire("Cuando confirmen la asistencia tambien escriban su nombre!");
     });
 
-    const whatsappBtn = document.getElementById("whatsappBtn");
-
-    whatsappBtn.addEventListener("click", () => {
-        const whatsappLink = "https://wa.link/wl6vti"; // Replace with your phone number
-        window.open(whatsappLink, "_blank");
-    });
-
-    // Cuenta regresiva
-    const countdownDate = new Date("April 27, 2024 15:00:00").getTime();
-
-    const x = setInterval(function () {
-        const now = new Date().getTime();
-        const distance = countdownDate - now;
-
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        document.getElementById("countdown").innerHTML =
-            `<span>${days}</span>d <span>${hours}</span>h <span>${minutes}</span>m <span>${seconds}</span>s`;
-
-        if (distance < 0) {
-            clearInterval(x);
-            document.getElementById("countdown").innerHTML = "¡El Baby Shower ha comenzado!";
-        }
-    }, 1000);
-
-    // Función para mostrar mensaje de confirmación y ocultar formulario
-    function confirmSubmit() {
-        const confirmationForm = document.getElementById("confirmationForm");
-        const confirmationMessage = document.getElementById("confirmationMessage");
-
-        confirmationForm.style.display = "none";
-        confirmationMessage.style.display = "block";
-
-        return true; // Permite que el formulario se envíe
-    }
-
-    // Función para mostrar el formulario de confirmación
-    function showConfirmationForm() {
-        const confirmationForm = document.getElementById("confirmationForm");
-        confirmationForm.style.display = "block";
-    }
 </script>
-
 <body>
     <div class="container">
-        <h1 class="header">¡Bienvenido a nuestro Baby Shower!</h1>
+<h1 class="header">¡Bienvenido a nuestro Baby Shower!</h1>
 
         <div class="baby-images">
             <img src="img/baby.jpg" alt="Mama Image" class="baby-image">
@@ -355,6 +310,53 @@
             <!-- Agrega más imágenes de ecos si lo deseas -->
         </div>
     </div>
+
+    <script>
+        const whatsappBtn = document.getElementById("whatsappBtn");
+
+        whatsappBtn.addEventListener("click", () => {
+            const whatsappLink = "https://wa.link/wl6vti"; // Replace with your phone number
+            window.open(whatsappLink, "_blank");
+        });
+
+        // Cuenta regresiva
+        const countdownDate = new Date("April 27, 2024 15:00:00").getTime();
+
+        const x = setInterval(function () {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerHTML =
+                `<span>${days}</span>d <span>${hours}</span>h <span>${minutes}</span>m <span>${seconds}</span>s`;
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "¡El Baby Shower ha comenzado!";
+            }
+        }, 1000);
+
+        // Función para mostrar mensaje de confirmación y ocultar formulario
+        function confirmSubmit() {
+            const confirmationForm = document.getElementById("confirmationForm");
+            const confirmationMessage = document.getElementById("confirmationMessage");
+
+            confirmationForm.style.display = "none";
+            confirmationMessage.style.display = "block";
+
+            return true; // Permite que el formulario se envíe
+        }
+
+        // Función para mostrar el formulario de confirmación
+        function showConfirmationForm() {
+            const confirmationForm = document.getElementById("confirmationForm");
+            confirmationForm.style.display = "block";
+        }
+    </script>
 </body>
 
 </html>
