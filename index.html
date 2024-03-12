@@ -7,11 +7,11 @@
     <title>Invitación Baby Shower</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
     <style>
         body {
             background: linear-gradient(135deg, #f3e5f5 0%, #9575cd 100%);
             font-family: 'Pacifico', cursive;
-            animation: gradientBg 10s infinite alternate;
             margin: 0;
             display: flex;
             align-items: center;
@@ -19,27 +19,17 @@
             min-height: 100vh;
         }
 
-        @keyframes gradientBg {
-            0% {
-                background-position: 0% 50%;
-            }
-
-            100% {
-                background-position: 100% 50%;
-            }
-        }
-
         .container {
             text-align: center;
             padding: 20px;
-            background-color: rgba(255, 255, 255, 0.95);
+            background-color: rgba(255, 255, 255, 0.9);
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             max-width: 600px;
             margin: 0 auto;
-            animation: fadeIn 1s ease-out;
             position: relative;
             overflow: hidden;
+            animation: fadeIn 1s ease-out;
         }
 
         .container:before {
@@ -57,7 +47,7 @@
 
         .header {
             color: #6a1b9a;
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: 20px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
             animation: slideInDown 1s ease-out;
@@ -92,62 +82,44 @@
             z-index: -1;
         }
 
-        @keyframes bounce {
-            from {
-                transform: translateY(0);
-            }
-
-            to {
-                transform: translateY(-10px);
-           }
-        }
-
-        @keyframes rotate {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
         .details {
-            color: #4527a0;
-            font-size: 1.2rem;
+            color: #6a1b9a;
+            font-size: 1.5rem;
             margin-top: 20px;
             animation: slideInLeft 1s ease-out;
         }
 
         .detail {
-            color: #4527a0;
-            font-size: 4rem;
+            color: #6a1b9a;
+            font-size: 5rem;
             margin-top: 20px;
+            font-family: 'Dancing Script', cursive;
+            font-weight: 500;
+            font-style: italic;
             animation: slideInRight 1s ease-out;
         }
 
         .countdown {
-            color: #4527a0;
-            font-size: 1.8rem;
+            color: #6a1b9a;
+            font-size: 2rem;
             margin-top: 20px;
             animation: slideInLeft 1s ease-out;
         }
 
         .btn-confirm {
-            background-color: #7e57c2;
-            border-color: #7e57c2;
-            padding: 10px 20px;
-            font-size: 1.2rem;
+            background-color: #9575cd;
+            border-color: #9575cd;
+            padding: 15px 30px;
+            font-size: 1.5rem;
             margin-top: 20px;
-           transition: background-color 0.3s ease-in-out;
+            transition: background-color 0.3s ease-in-out;
             cursor: pointer;
             border-radius: 30px;
             display: inline-block;
             text-align: center;
             line-height: 1;
             user-select: none;
-            padding: 0.5rem 1rem;
-            font-weight: 400;
+            font-weight: 700;
             text-align: center;
             text-decoration: none;
             vertical-align: middle;
@@ -160,7 +132,7 @@
         }
 
         .btn-confirm:hover {
-            background-color: #5e35b1;
+            background-color: #7e57c2;
         }
 
         .confirmation-form {
@@ -180,72 +152,8 @@
             color: #43a047;
             background-color: #e8f5e9;
             border: 1px solid #43a047;
-            padding: 10px;
+            padding: 15px;
             border-radius: 5px;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes slideInLeft {
-            from {
-                transform: translateX(-100%);
-            }
-
-            to {
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes slideInRight {
-            from {
-                transform: translateX(100%);
-            }
-
-            to {
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(126, 87, 194, 0.7);
-            }
-
-            50% {
-                box-shadow: 0 0 0 10px rgba(126, 87, 194, 0);
-            }
-
-            100% {
-                box-shadow: 0 0 0 0 rgba(126, 87, 194, 0);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .baby-image {
-                width: 60px;
-                height: 60px;
-            }
-
-            .header {
-                font-size: 1.5rem;
-            }
-
-            .countdown {
-                font-size: 1.5rem;
-            }
-
-            .btn-confirm {
-                padding: 8px 16px;
-                font-size: 1rem;
-            }
         }
 
         .ecos-container {
@@ -265,98 +173,101 @@
     </style>
 </head>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.js"></script>
-<script>
-    $(document).ready(function () {
-        Swal.fire("Cuando confirmen la asistencia tambien escriban su nombre!");
-    });
+<!-- Rest of the code remains unchanged -->
 
-</script>
-<body>
-    <div class="container">
-<h1 class="header">¡Bienvenido a nuestro Baby Shower!</h1>
 
-        <div class="baby-images">
-            <img src="img/baby.jpg" alt="Mama Image" class="baby-image">
-            <!-- Agrega más imágenes si lo deseas -->
-        </div>
 
-        <p class="details">Estamos emocionados de celebrar la llegada de nuestra pequeña princesa.</p>
-        <p class="detail">Lindsey</p>
-        <p class="details">¡Esperamos contar con tu presencia!</p>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.js"></script>
+	<script>
+	    $(document).ready(function () {
+	        Swal.fire("Cuando confirmen la asistencia tambien escriban su nombre!");
+	    });
 
-        <p class="details"><strong>Lugar:</strong> Lingote 4023, col. Benito Juarez</p>
-        <p class="details"><strong>Fecha y Hora:</strong> 27 de abril de 2024 a las 15:00</p>
+	</script>
+	<body>
+	    <div class="container">
+	<h1 class="header">¡Bienvenido a nuestro Baby Shower!</h1>
 
-        <!-- Cuenta Regresiva -->
-        <h2 class="countdown">Cuenta Regresiva</h2>
-        <div id="countdown" class="countdown"></div>
+	        <div class="baby-images">
+	            <img src="img/baby.jpg" alt="Mama Image" class="baby-image">
+	            <!-- Agrega más imágenes si lo deseas -->
+	        </div>
 
-        <!-- Botón de Confirmar Asistencia -->
-        <button id="whatsappBtn" id="confirmBtn" class="btn btn-confirm" onclick="showConfirmationForm()">Confirmar Asistencia</button>
+	        <p class="details">Estamos emocionados de celebrar la llegada de nuestra pequeña princesa.</p>
+	        <p class="detail">Lindsey</p>
+	        <p class="details">¡Esperamos contar con tu presencia!</p>
 
-        <!-- Formulario de Confirmación de Asistencia -->
-        <div id="confirmationForm" class="confirmation-form">
-            <!-- Mensaje de confirmación -->
-            <div class="alert" id="confirmationMessage">¡Tu asistencia ha sido confirmada!</div>
-        </div>
+	        <p class="details"><strong>Lugar:</strong> Lingote 4023, col. Benito Juarez</p>
+	        <p class="details"><strong>Fecha y Hora:</strong> 27 de abril de 2024 a las 15:00</p>
 
-        <!-- Sección de fotos de ecos -->
-        <div class="ecos-container">
-            <img src="img/eco.jpeg" alt="Eco Image" class="eco-image">
-            <img src="img/meli.jpeg" alt="Eco Image" class="eco-image">
-            <img src="img/niña.jpeg" alt="Eco Image" class="eco-image">
-            <!-- Agrega más imágenes de ecos si lo deseas -->
-        </div>
-    </div>
+	        <!-- Cuenta Regresiva -->
+	        <h2 class="countdown">Cuenta Regresiva</h2>
+	        <div id="countdown" class="countdown"></div>
 
-    <script>
-        const whatsappBtn = document.getElementById("whatsappBtn");
+	        <!-- Botón de Confirmar Asistencia -->
+	        <button id="whatsappBtn" id="confirmBtn" class="btn btn-confirm" onclick="showConfirmationForm()">Confirmar Asistencia</button>
 
-        whatsappBtn.addEventListener("click", () => {
-            const whatsappLink = "https://wa.link/wl6vti"; // Replace with your phone number
-            window.open(whatsappLink, "_blank");
-        });
+	        <!-- Formulario de Confirmación de Asistencia -->
+	        <div id="confirmationForm" class="confirmation-form">
+	            <!-- Mensaje de confirmación -->
+	            <div class="alert" id="confirmationMessage">¡Tu asistencia ha sido confirmada!</div>
+	        </div>
 
-        // Cuenta regresiva
-        const countdownDate = new Date("April 27, 2024 15:00:00").getTime();
+	        <!-- Sección de fotos de ecos -->
+	        <div class="ecos-container">
+	            <img src="img/meli.jpeg" alt="Eco Image" class="eco-image">
+	            <img src="img/niña.jpeg" alt="Eco Image" class="eco-image">
+	            <!-- Agrega más imágenes de ecos si lo deseas -->
+	        </div>
+	    </div>
 
-        const x = setInterval(function () {
-            const now = new Date().getTime();
-            const distance = countdownDate - now;
+	    <script>
+	        const whatsappBtn = document.getElementById("whatsappBtn");
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+	        whatsappBtn.addEventListener("click", () => {
+	            const whatsappLink = "https://wa.link/wl6vti"; // Replace with your phone number
+	            window.open(whatsappLink, "_blank");
+	        });
 
-            document.getElementById("countdown").innerHTML =
-                `<span>${days}</span>d <span>${hours}</span>h <span>${minutes}</span>m <span>${seconds}</span>s`;
+	        // Cuenta regresiva
+	        const countdownDate = new Date("April 27, 2024 15:00:00").getTime();
 
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("countdown").innerHTML = "¡El Baby Shower ha comenzado!";
-            }
-        }, 1000);
+	        const x = setInterval(function () {
+	            const now = new Date().getTime();
+	            const distance = countdownDate - now;
 
-        // Función para mostrar mensaje de confirmación y ocultar formulario
-        function confirmSubmit() {
-            const confirmationForm = document.getElementById("confirmationForm");
-            const confirmationMessage = document.getElementById("confirmationMessage");
+	            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+	            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+	            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            confirmationForm.style.display = "none";
-            confirmationMessage.style.display = "block";
+	            document.getElementById("countdown").innerHTML =
+	                `<span>${days}</span>d <span>${hours}</span>h <span>${minutes}</span>m <span>${seconds}</span>s`;
 
-            return true; // Permite que el formulario se envíe
-        }
+	            if (distance < 0) {
+	                clearInterval(x);
+	                document.getElementById("countdown").innerHTML = "¡El Baby Shower ha comenzado!";
+	            }
+	        }, 1000);
 
-        // Función para mostrar el formulario de confirmación
-        function showConfirmationForm() {
-            const confirmationForm = document.getElementById("confirmationForm");
-            confirmationForm.style.display = "block";
-        }
-    </script>
-</body>
+	        // Función para mostrar mensaje de confirmación y ocultar formulario
+	        function confirmSubmit() {
+	            const confirmationForm = document.getElementById("confirmationForm");
+	            const confirmationMessage = document.getElementById("confirmationMessage");
 
-</html>
+	            confirmationForm.style.display = "none";
+	            confirmationMessage.style.display = "block";
+
+	            return true; // Permite que el formulario se envíe
+	        }
+
+	        // Función para mostrar el formulario de confirmación
+	        function showConfirmationForm() {
+	            const confirmationForm = document.getElementById("confirmationForm");
+	            confirmationForm.style.display = "block";
+	        }
+	    </script>
+	</body>
+
+	</html>
