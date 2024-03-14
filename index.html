@@ -173,8 +173,6 @@
     </style>
 </head>
 
-<!-- Rest of the code remains unchanged -->
-
 
 
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -186,6 +184,15 @@
 
 	</script>
 	<body>
+  <script>
+        // Revisar si la página está siendo cargada por un refresh
+        if (performance.navigation.type === 1) {
+            // La página está siendo cargada por un refresh, redirigir a loading.html
+            window.location.href = "loading.html";
+        }
+    </script>
+   <div id="loader" class="loader"></div>
+
 	    <div class="container">
 	<h1 class="header">¡Bienvenido a nuestro Baby Shower!</h1>
 
